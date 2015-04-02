@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>scr_initFunction();
 shotTimer = 0;
-vspeed = 3;
+vspeed = 1;
 </string>
           </argument>
         </arguments>
@@ -54,7 +54,7 @@ vspeed = 3;
     t += 1;
     x = xstart + sin( t*pi*1.2/room_speed )*48;
     shotTimer++;
-    if(shotTimer &gt; 24){
+    if(shotTimer &gt; 64){
         instance_create(x, y, o_enemyProjectile);
         shotTimer = 0;
     }

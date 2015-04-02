@@ -35,6 +35,7 @@ enemyPackTypes[200] = 'oneEnemy';
 enemyPackTypes[350] = 'twoEnemies';
 enemyPackTypes[480] = 'threeEnemies';
 timer = 0;
+type = 1;
 </string>
           </argument>
         </arguments>
@@ -63,14 +64,19 @@ if(global.isRecording){
     timer++;
 }
 
-if(global.timeStep == 480){
-    show_debug_message('480!');
-}
-
-for(i = 0; i &lt; 4; i++){
-    if(timeStamps[i] == global.timeStep){
-        scr_summonEnemies(enemyPackTypes[global.timeStep]);
+if(timer &gt; 200){
+    if(type == 1){
+        scr_summonEnemies('oneEnemy');
+    } else if(type == 2){
+        scr_summonEnemies('twoEnemies');
+    } else if(type == 3){
+        scr_summonEnemies('threeEnemies');
     }
+    type++;
+    if(type &gt; 3){
+        type = 1;
+    }
+    timer = 0;
 }
 </string>
           </argument>

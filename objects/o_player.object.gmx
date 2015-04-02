@@ -70,13 +70,17 @@ timePowerTimer = 0;
         vspeed = 0;
     }
     
-    if(keyboard_check(ord('Z'))){
+    if(keyboard_check(ord('Z')) &amp;&amp; shotTimer &gt; 10){
         instance_create(x, y, o_playerProjectile);
+        shotTimer = 0;
     }
+    shotTimer++;
     
     timePowerTimer++;
     if(timePowerTimer &gt; 5){
-        timePower++;
+        if(timePower &lt; maxTimePower){
+            timePower++;
+        }
         timePowerTimer = 0;
     }
 }
