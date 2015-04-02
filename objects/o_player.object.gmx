@@ -55,17 +55,17 @@ timePowerTimer = 0;
             <kind>1</kind>
             <string>if(global.canMove &amp;&amp; !dead){
     if(keyboard_check(vk_left)){
-        hspeed = -5;
+        hspeed = -2;
     } else if(keyboard_check(vk_right)){
-        hspeed = 5;
+        hspeed = 2;
     } else {
         hspeed = 0;
     }
     
     if(keyboard_check(vk_up)){
-        vspeed = -5;
+        vspeed = -2;
     } else if(keyboard_check(vk_down)){
-        vspeed = 5;
+        vspeed = 2;
     } else {
         vspeed = 0;
     }
