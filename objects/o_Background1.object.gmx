@@ -57,7 +57,16 @@ if global.isRecording
         scrollSpd = 2
     }
     
-    else scrollSpd = -10
+    else 
+    {
+    
+    scrollSpd = 10
+    
+    }
+    
+    
+
+    
 </string>
           </argument>
         </arguments>
