@@ -110,7 +110,11 @@ scr_recordThis();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_collideWithPlayer();
+            <string>// kill player
+if(!dead){
+    other.dead = true;
+}
+dead = true;
 </string>
           </argument>
         </arguments>
