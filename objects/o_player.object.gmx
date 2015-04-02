@@ -69,10 +69,11 @@ timePowerTimer = 0;
     } else {
         vspeed = 0;
     }
-    
+    shooting = false;
     if(keyboard_check(ord('Z')) &amp;&amp; shotTimer &gt; 10){
         instance_create(x, y, o_playerProjectile);
         shotTimer = 0;
+        shooting = true;
     }
     shotTimer++;
     

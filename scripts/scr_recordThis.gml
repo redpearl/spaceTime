@@ -11,6 +11,7 @@ if(global.isRecording && global.canMove){
     pArray[global.timeStep, 4] = image_index;
     pArray[global.timeStep, 5] = t;
     pArray[global.timeStep, 6] = shotTimer;
+    pArray[global.timeStep, 7] = shooting;
 } else {
     // set position to appropriate timeStep
     //hspeed = 0;
@@ -25,5 +26,6 @@ if(global.isRecording && global.canMove){
         image_index = pArray[global.timeStep, 4];
         t = pArray[global.timeStep, 5];
         shotTimer = pArray[global.timeStep, 6];
+        shooting = pArray[global.timeStep, 7];
     }
 }

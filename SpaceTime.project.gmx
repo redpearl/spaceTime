@@ -34,6 +34,7 @@
   <objects name="objects">
     <object>objects\o_timeController</object>
     <object>objects\o_player</object>
+    <object>objects\o_playerClone</object>
     <object>objects\o_playerProjectile</object>
     <object>objects\o_enemy</object>
     <object>objects\o_explosion</object>
@@ -42,6 +43,7 @@
     <object>objects\o_waveSpawner</object>
     <object>objects\o_timeBar</object>
     <object>objects\o_Background1</object>
+    <object>objects\o_screenShakeController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
