@@ -87,7 +87,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10, 10, global.timeStep);
+            <string>// ble
+draw_text(10, 10, global.timeStep);
 </string>
           </argument>
         </arguments>
