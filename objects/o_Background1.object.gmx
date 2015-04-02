@@ -51,13 +51,15 @@ scrollSpd = 2
             <kind>1</kind>
             <string>drawY +=scrollSpd
 
+if (global.isRecording) {
+    scrollSpd = 2
+    } else {
+    scrollSpd = -10
+}
 
-if global.isRecording 
-    {
-        scrollSpd = 2
-    }
-    
-    else scrollSpd = -10
+if(o_player.dead){
+    scrollSpd = 0;
+}
 </string>
           </argument>
         </arguments>

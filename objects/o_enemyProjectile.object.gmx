@@ -72,7 +72,9 @@ vspeed = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_collideWithPlayer();
+            <string>if(!dead){
+    other.dead = true;
+}
 dead = true;
 </string>
           </argument>
