@@ -16,6 +16,11 @@
     <sprite>sprites\spr_bar</sprite>
     <sprite>sprites\spr_bckForward</sprite>
     <sprite>sprites\spr_bckRewind</sprite>
+    <sprite>sprites\spr_Boss</sprite>
+    <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\spr_projectileEnemy</sprite>
+    <sprite>sprites\spr_projectilePlayer</sprite>
+    <sprite>sprites\spr_playerGhost</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -44,6 +49,7 @@
     <object>objects\o_timeBar</object>
     <object>objects\o_Background1</object>
     <object>objects\o_screenShakeController</object>
+    <object>objects\o_GhostTest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
