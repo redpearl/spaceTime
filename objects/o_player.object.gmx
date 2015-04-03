@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>scr_initFunction();
-
+player = true;
 timePower = 175;
 maxTimePower = 250;
-
+name = 'persist';
 timePowerTimer = 0;
 </string>
           </argument>
@@ -72,6 +72,7 @@ timePowerTimer = 0;
     shooting = false;
     if(keyboard_check(ord('Z')) &amp;&amp; shotTimer &gt; 10){
         instance_create(x, y, o_playerProjectile);
+        scr_playRandomShot();
         shotTimer = 0;
         shooting = true;
     }
@@ -85,6 +86,8 @@ timePowerTimer = 0;
         timePowerTimer = 0;
     }
 }
+
+global.dead = dead;
 
 scr_recordThis();
 </string>
@@ -133,6 +136,7 @@ scr_recordThis();
           <argument>
             <kind>1</kind>
             <string>draw_text(100, 10, timePower);
+draw_text(20, 20, string(o_player.dead));
 </string>
           </argument>
         </arguments>

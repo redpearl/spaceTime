@@ -64,7 +64,7 @@ show_debug_message('Spawned clone');
             <string>if(finalTimeStep &gt; global.timeStep &amp;&amp; global.timeStep &gt; firstTimeStep){
     x = pArray[global.timeStep, 0];
     y = pArray[global.timeStep, 1];
-    dead = pArray[global.timeStep, 2];
+    //dead = pArray[global.timeStep, 2];
     image_speed = pArray[global.timeStep, 3];
     image_index = pArray[global.timeStep, 4];
     t = pArray[global.timeStep, 5];
@@ -72,6 +72,69 @@ show_debug_message('Spawned clone');
     shooting = pArray[global.timeStep, 7];
 } else {
     dead = true;
+}
+
+if(shooting &amp;&amp; !dead){
+    instance_create(x, y, o_playerProjectile);
+    scr_playRandomShot();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_enemyProjectile">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!dead &amp;&amp; !other.dead){
+    other.dead = true;
+    var explode = instance_create(x, y, o_explosion);
+    explode.dark = true;
+    dead = true;
+    scr_playRandomShipExplosion();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!dead &amp;&amp; !other.dead){
+    other.dead = true;
+    dead = true;
+    var explode = instance_create(x, y, o_explosion);
+    explode.dark = true;
+    scr_playRandomShipExplosion();
 }
 </string>
           </argument>

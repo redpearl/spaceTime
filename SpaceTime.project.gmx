@@ -6,21 +6,45 @@
   <NewExtensions>
     <extension index="0">extensions\CRT Pixel Shader</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_activate01</sound>
+    <sound>sound\snd_explodeShip01</sound>
+    <sound>sound\snd_explodeShip02</sound>
+    <sound>sound\snd_explodeShip03</sound>
+    <sound>sound\snd_explodeShip04</sound>
+    <sound>sound\snd_explode01</sound>
+    <sound>sound\snd_explode02</sound>
+    <sound>sound\snd_explode03</sound>
+    <sound>sound\snd_explode04</sound>
+    <sound>sound\snd_shoot01</sound>
+    <sound>sound\snd_shoot02</sound>
+    <sound>sound\snd_shoot03</sound>
+    <sound>sound\snd_shoot04</sound>
+    <sound>sound\snd_enemyShot01</sound>
+    <sound>sound\snd_enemyShot02</sound>
+    <sound>sound\snd_enemyShot03</sound>
+    <sound>sound\snd_enemyShot04</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemyAngry</sprite>
     <sprite>sprites\spr_explosion</sprite>
+    <sprite>sprites\spr_explosionSmall</sprite>
+    <sprite>sprites\spr_darkExplosion</sprite>
     <sprite>sprites\spr_enemyProjectile</sprite>
     <sprite>sprites\spr_bar</sprite>
     <sprite>sprites\spr_bckForward</sprite>
     <sprite>sprites\spr_bckRewind</sprite>
+    <sprite>sprites\spr_bckRewindFast</sprite>
+    <sprite>sprites\spr_bckRewindSlow</sprite>
     <sprite>sprites\spr_Boss</sprite>
     <sprite>sprites\spr_enemy2</sprite>
     <sprite>sprites\spr_projectileEnemy</sprite>
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
+    <sprite>sprites\spr_bigEnemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -32,6 +56,10 @@
     <script>scripts\scr_initFunction.gml</script>
     <script>scripts\scr_collideWithPlayer.gml</script>
     <script>scripts\scr_summonEnemies.gml</script>
+    <script>scripts\scr_playRandomShipExplosion.gml</script>
+    <script>scripts\scr_playRandomEnemyExplosion.gml</script>
+    <script>scripts\scr_playRandomShot.gml</script>
+    <script>scripts\scr_playRandomEnemyShot.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>
@@ -43,6 +71,7 @@
     <object>objects\o_playerProjectile</object>
     <object>objects\o_enemy</object>
     <object>objects\o_explosion</object>
+    <object>objects\o_explosionSmall</object>
     <object>objects\o_enemyProjectile</object>
     <object>objects\obj_CRT</object>
     <object>objects\o_waveSpawner</object>
@@ -51,6 +80,7 @@
     <object>objects\o_screenShakeController</object>
     <object>objects\o_GhostTest</object>
     <object>objects\oBossTest</object>
+    <object>objects\o_bigEnemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
