@@ -50,8 +50,8 @@
             <kind>1</kind>
             <string>if(shakeTimer &gt; 0){
     shakeTimer--;
-    amounty1 =- 5 + round(random(10));
-    amountx1 =- 5 + round(random(10));
+    amounty1 =- 1.5 + round(random(3));
+    amountx1 =- 1.5 + round(random(3));
     view_yview[0] += amounty1;
     view_hview[0] += amounty1;
     view_xview[0] += amountx1;

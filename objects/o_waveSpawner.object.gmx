@@ -64,7 +64,7 @@ if(global.isRecording){
     timer++;
 }
 
-if(timer &gt; 200){
+if(timer &gt; 100){
     if(type == 1){
         scr_summonEnemies('oneEnemy');
     } else if(type == 2){

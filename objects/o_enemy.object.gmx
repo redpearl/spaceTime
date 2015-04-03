@@ -54,12 +54,13 @@ vspeed = 1;
     t += 1;
     x = xstart + sin( t*pi*1.2/room_speed )*48;
     shotTimer++;
-    if(shotTimer &gt; 64){
+    if(shotTimer &gt; 32){
         instance_create(x, y, o_enemyProjectile);
         shotTimer = 0;
     }
 }
 scr_recordThis();
+if y &gt; view_hview[0]+16 instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -113,7 +114,9 @@ scr_recordThis();
             <string>// kill player
 if(!dead){
     other.dead = true;
+    
 }
+o_screenShakeController.shakeTimer = 1;
 dead = true;
 </string>
           </argument>

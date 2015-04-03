@@ -11,4 +11,10 @@ if(argument0 == 'oneEnemy'){
     instance_create(30, -20, o_enemy);
     instance_create(70, -10, o_enemy);
     instance_create(120, -20, o_enemy);
+} else if(argument0 == 'fourEnemies'){
+    show_debug_message('wave 4');
+    instance_create(30, -20, o_enemy);
+    instance_create(70, -10, o_enemy);
+    instance_create(120, -20, o_enemy);
+    instance_create(160, -10, o_enemy);
 }
