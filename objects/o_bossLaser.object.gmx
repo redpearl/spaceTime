@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>scr_initFunction();
 image_speed = .5
+//instance_create(0,0,o_screenFlash)
 //name = "persist"
 </string>
           </argument>
@@ -57,6 +58,7 @@ x = o_Boss.x
 y = o_Boss.y+24
 
 }
+if image_index = 20 instance_create(0,0,o_screenFlash)
 </string>
           </argument>
         </arguments>
@@ -112,6 +114,8 @@ y = o_Boss.y+24
           <argument>
             <kind>1</kind>
             <string>dead = true
+image_index = 0
+image_speed = 0
 </string>
           </argument>
         </arguments>

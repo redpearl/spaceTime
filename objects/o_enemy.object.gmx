@@ -93,11 +93,7 @@ if (y &gt; view_hview[0]+16){
           <argument>
             <kind>1</kind>
             <string>if(!dead &amp;&amp; !other.dead){
-    o_player.timePower += 10;
-    if(o_player.timePower &gt; o_player.maxTimePower){
-        o_player.timePower = o_player.maxTimePower;
-    }
-    scr_activateHitPause();
+    o_player.timePower += 10
     dead = true;
     other.dead = true;
     instance_create(x, y, o_explosion);
@@ -114,7 +110,7 @@ if (y &gt; view_hview[0]+16){
     small4.hspeed = -2;
     small4.vspeed = 2;
     scr_playRandomEnemyExplosion();
-}
+    instance_create(x,y,o_timeUp)}
 </string>
           </argument>
         </arguments>

@@ -45,16 +45,15 @@
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
-    <sprite>sprites\spr_enemySmall</sprite>
     <sprites name="hud">
       <sprite>sprites\spr_hudMain</sprite>
-      <sprite>sprites\spr_hudMainRed</sprite>
       <sprite>sprites\spr_hudBar</sprite>
-      <sprite>sprites\spr_hudBarRed</sprite>
       <sprite>sprites\spr_hudLimit</sprite>
     </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
+    <sprite>sprites\spr_screenFlash</sprite>
+    <sprite>sprites\spr_timeUp</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -71,7 +70,6 @@
     <script>scripts\scr_playRandomShot.gml</script>
     <script>scripts\scr_playRandomEnemyShot.gml</script>
     <script>scripts\s_input.gml</script>
-    <script>scripts\scr_activateHitPause.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>
@@ -95,10 +93,10 @@
     <object>objects\o_GhostTest</object>
     <object>objects\o_Boss</object>
     <object>objects\o_enemyFlyby</object>
-    <object>objects\o_enemyTemplate</object>
     <object>objects\o_enemySmall</object>
-    <object>objects\o_timePowerMeter</object>
     <object>objects\o_bossLaser</object>
+    <object>objects\o_screenFlash</object>
+    <object>objects\o_timeUp</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
