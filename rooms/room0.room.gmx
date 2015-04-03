@@ -58,6 +58,10 @@ window_set_size(432, 768);</code>
     <instance objName="o_waveSpawner" x="96" y="-96" name="inst_7B8A980B" locked="-1" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_Background1" x="-96" y="224" name="inst_CCF4F009" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_screenShakeController" x="160" y="256" name="inst_D839E7B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_enemyFlyby" x="32" y="-32" name="inst_FA96A6E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_enemyFlyby" x="160" y="-32" name="inst_B8092471" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_enemyFlyby" x="32" y="64" name="inst_0844A5E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_enemyFlyby" x="160" y="64" name="inst_065CA632" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

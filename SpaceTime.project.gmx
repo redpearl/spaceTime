@@ -79,6 +79,7 @@
     <object>objects\o_explosion</object>
     <object>objects\o_explosionSmall</object>
     <object>objects\o_enemyProjectile</object>
+    <object>objects\o_enemyProjectileHoming</object>
     <object>objects\obj_CRT</object>
     <object>objects\o_waveSpawner</object>
     <object>objects\o_timeBar</object>
@@ -87,6 +88,7 @@
     <object>objects\o_GhostTest</object>
     <object>objects\oBossTest</object>
     <object>objects\o_bigEnemy</object>
+    <object>objects\o_enemyFlyby</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
