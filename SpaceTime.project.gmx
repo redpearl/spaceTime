@@ -45,13 +45,13 @@
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
-    <sprite>sprites\spr_enemySmall</sprite>
     <sprites name="hud">
       <sprite>sprites\spr_hudMain</sprite>
       <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudLimit</sprite>
     </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
+    <sprite>sprites\spr_bossBullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -81,6 +81,7 @@
     <object>objects\o_explosion</object>
     <object>objects\o_explosionSmall</object>
     <object>objects\o_enemyProjectile</object>
+    <object>objects\o_bossBullet</object>
     <object>objects\o_enemyProjectileHoming</object>
     <object>objects\obj_CRT</object>
     <object>objects\o_waveSpawner</object>
@@ -88,13 +89,9 @@
     <object>objects\o_Background1</object>
     <object>objects\o_screenShakeController</object>
     <object>objects\o_GhostTest</object>
-    <object>objects\oBossTest</object>
+    <object>objects\o_Boss</object>
     <object>objects\o_bigEnemy</object>
-<<<<<<< HEAD
     <object>objects\o_enemyFlyby</object>
-=======
-    <object>objects\o_enemyTemplate</object>
->>>>>>> b8ce09e63b7031d8cd3274155ba6a0579a3a1b8b
     <object>objects\o_enemySmall</object>
     <object>objects\o_bossLaser</object>
   </objects>
