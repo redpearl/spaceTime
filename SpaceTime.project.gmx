@@ -46,6 +46,11 @@
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
     <sprite>sprites\sprite19</sprite>
+    <sprites name="hud">
+      <sprite>sprites\spr_hudMain</sprite>
+      <sprite>sprites\spr_hudBar</sprite>
+      <sprite>sprites\spr_hudLimit</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -61,6 +66,7 @@
     <script>scripts\scr_playRandomEnemyExplosion.gml</script>
     <script>scripts\scr_playRandomShot.gml</script>
     <script>scripts\scr_playRandomEnemyShot.gml</script>
+    <script>scripts\s_input.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.rewoundFrames = 0;
+            <string>action_1 = 0
+global.rewoundFrames = 0;
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((global.isRecording &amp;&amp; keyboard_check(ord('X')) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; keyboard_check(ord('X')) &amp;&amp; o_player.timePower &gt; 0)){
+            <string>if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0)){
     if(global.rewoundFrames &lt; 1){
         audio_play_sound(snd_activate01, 10, false);
     }
