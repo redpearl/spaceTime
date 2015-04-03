@@ -60,7 +60,7 @@ window_set_size(432, 768);</code>
     <instance objName="o_screenShakeController" x="160" y="256" name="inst_D839E7B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_timePowerMeter" x="108" y="352" name="inst_1378F887" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_bossLaser" x="96" y="32" name="inst_FE266246" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-  </instances>
+</instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

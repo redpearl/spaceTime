@@ -34,7 +34,6 @@ timeStamps[3] = 480;
 enemyPackTypes[200] = 'oneEnemy';
 enemyPackTypes[350] = 'twoEnemies';
 enemyPackTypes[480] = 'threeEnemies';
-enemyPackTypes[480] = 'newEnemies';
 timer = 0;
 type = 1;
 
@@ -69,7 +68,6 @@ if(global.isRecording){
 }
 
 if(t &gt; 200){
-
     if(type == 1){
         scr_summonEnemies('oneEnemy');
     } else if(type == 2){
@@ -87,7 +85,7 @@ if(t &gt; 200){
     }
     type++;
     if(type &gt; 7){
-        type = 1;
+    type  = 1;
     }
     t = 0;
 }
