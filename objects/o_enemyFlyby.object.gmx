@@ -29,6 +29,9 @@
 shotTimer = 0;
 totalShots = 0
 vspeed = 3;
+name = 'persist';
+hspeed = -2;
+hp = 3;
 </string>
           </argument>
         </arguments>
@@ -62,13 +65,25 @@ vspeed = 3;
         sprite_index = spr_enemy;
     }
     */
-    if(shotTimer &gt; 16) and totalShots &lt; 10{
+    if(shotTimer &gt; 32) {
+        if(x &gt; 150){
+            hspeed = -2;
+        } else if(x &lt; 70){
+            hspeed = 2;
+        }
+        
+        if(vspeed &gt; 0 &amp;&amp; y &gt; 80){
+            vspeed = -3;
+        } else {
+            vspeed = 3;
+        }
+        
         instance_create(x, y, o_enemyProjectileHoming);
         instance_create(x, y, o_enemyProjectileHoming);
         instance_create(x, y, o_enemyProjectileHoming);
         scr_playRandomEnemyShot();
         shotTimer = 0;
-        totalShots ++
+        totalShots++;
     }
 }
 scr_recordThis();

@@ -94,7 +94,6 @@
     <object>objects\o_screenShakeController</object>
     <object>objects\o_GhostTest</object>
     <object>objects\o_Boss</object>
-    <object>objects\o_bigEnemy</object>
     <object>objects\o_enemyFlyby</object>
     <object>objects\o_enemyTemplate</object>
     <object>objects\o_enemySmall</object>

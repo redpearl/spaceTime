@@ -79,12 +79,20 @@ if(t &gt; 200){
     } else if(type == 5){
         scr_summonEnemies('newEnemies2');
     } else if(type == 6){
-        scr_summonEnemies('newEnemies3');
+        scr_summonEnemies('bigEnemy');
     } else if(type == 7){
         scr_summonEnemies('fourEnemies');
+    } else if(type == 8){
+        scr_summonEnemies('bigEnemy');
+    } else if(type == 9){
+        scr_summonEnemies('newEnemies3');
+    } else if(type == 10){
+        scr_summonEnemies('newEnemies4');
+    } else if(type == 11){
+        scr_summonEnemies('mixedEnemies1');
     }
     type++;
-    if(type &gt; 7){
+    if(type &gt; 11){
     type  = 1;
     }
     t = 0;
