@@ -45,6 +45,11 @@
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
+    <sprites name="hud">
+      <sprite>sprites\spr_hudMain</sprite>
+      <sprite>sprites\spr_hudBar</sprite>
+      <sprite>sprites\spr_hudLimit</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
