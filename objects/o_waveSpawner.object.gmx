@@ -78,9 +78,15 @@ if(t &gt; 200){
         scr_summonEnemies('threeEnemies');
     } else if(type == 4){
         scr_summonEnemies('newEnemies');
+    } else if(type == 5){
+        scr_summonEnemies('newEnemies2');
+    } else if(type == 6){
+        scr_summonEnemies('newEnemies3');
+    } else if(type == 7){
+        scr_summonEnemies('fourEnemies');
     }
     type++;
-    if(type &gt; 4){
+    if(type &gt; 7){
         type = 1;
     }
     t = 0;

@@ -28,7 +28,7 @@
             <string>scr_initFunction();
 player = true;
 timePower = 175;
-maxTimePower = 250;
+maxTimePower = 750;
 name = 'persist';
 timePowerTimer = 0;
 
@@ -37,6 +37,30 @@ right_1 = 1
 up_1 = 2
 down_1 = 3
 attack_1 = 4
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.hitPause = false;
+show_debug_message('hitPause off!');
 </string>
           </argument>
         </arguments>
@@ -59,7 +83,10 @@ attack_1 = 4
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.canMove &amp;&amp; !dead){
+            <string>if(timePower &gt; maxTimePower){
+    timePower = maxTimePower;
+}
+if(global.canMove &amp;&amp; !dead){
     var moveSpeed = 2;
     if(s_input(attack_1)){
         moveSpeed = 1;
@@ -145,8 +172,8 @@ scr_recordThis();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(100, 10, timePower);
-draw_text(20, 20, string(o_player.dead));
+            <string>//draw_text(100, 10, timePower);
+draw_text(20, 20, string(global.hitPause));
 </string>
           </argument>
         </arguments>
@@ -169,7 +196,10 @@ draw_text(20, 20, string(o_player.dead));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_drawFunction();
+            <string>if(timePower &gt; maxTimePower){
+    timePower = maxTimePower;
+}
+scr_drawFunction();
 </string>
           </argument>
         </arguments>

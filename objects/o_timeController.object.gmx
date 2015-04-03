@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>action_1 = 0
 global.rewoundFrames = 0;
+global.hitPause = false;
 </string>
           </argument>
         </arguments>
@@ -49,56 +50,58 @@ global.rewoundFrames = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0)){
-    if(global.rewoundFrames &lt; 1){
-        audio_play_sound(snd_activate01, 10, false);
-    }
-    with(o_playerClone){
-     //   instance_destroy();
-    }
-    global.isRecording = false;
-    global.canMove = false;
-    if(global.timeStep &gt; o_player.firstTimeStep){
-        if(global.rewoundFrames &lt; 15){
-            global.timeStep--;
-            o_player.timePower--;
-            global.rewoundFrames++;
-        } else if(global.rewoundFrames &lt; 30) {
-            if(global.timeStep - 2 &gt;= o_player.firstTimeStep){
-                global.timeStep -= 2;
-                o_player.timePower -=2;
-                global.rewoundFrames += 2;
+            <string>if(!global.hitPause){
+    if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0)){
+        if(global.rewoundFrames &lt; 1){
+            audio_play_sound(snd_activate01, 10, false);
+        }
+        with(o_playerClone){
+         //   instance_destroy();
+        }
+        global.isRecording = false;
+        global.canMove = false;
+        if(global.timeStep &gt; o_player.firstTimeStep){
+            if(global.rewoundFrames &lt; 15){
+                global.timeStep--;
+                o_player.timePower--;
+                global.rewoundFrames++;
+            } else if(global.rewoundFrames &lt; 30) {
+                if(global.timeStep - 2 &gt;= o_player.firstTimeStep){
+                    global.timeStep -= 2;
+                    o_player.timePower -=2;
+                    global.rewoundFrames += 2;
+                } else {
+                    global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
+                    global.timeStep = o_player.firstTimeStep;
+                }
             } else {
-                global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
-                global.timeStep = o_player.firstTimeStep;
+                if(global.timeStep - 5 &gt;= o_player.firstTimeStep){
+                    o_player.timePower -= 5;
+                    global.timeStep -= 5;
+                    global.rewoundFrames += 5;
+                } else {
+                    global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
+                    global.timeStep = o_player.firstTimeStep;
+                }
             }
         } else {
-            if(global.timeStep - 5 &gt;= o_player.firstTimeStep){
-                o_player.timePower -= 5;
-                global.timeStep -= 5;
-                global.rewoundFrames += 5;
-            } else {
-                global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
-                global.timeStep = o_player.firstTimeStep;
-            }
+            global.timeStep = o_player.firstTimeStep;
         }
+        
+    } else if(o_player.dead){
+        global.isRecording = false;
+        global.canMove = false;
     } else {
-        global.timeStep = o_player.firstTimeStep;
+        if(global.rewoundFrames &gt; 0){
+            // create clonePlayer here
+            show_debug_message('rewound frames');
+            instance_create(o_player.x, o_player.y, o_playerClone);
+        }
+        global.isRecording = true;
+        global.timeStep++;
+        global.canMove = true;
+        global.rewoundFrames = 0;
     }
-    
-} else if(o_player.dead){
-    global.isRecording = false;
-    global.canMove = false;
-} else {
-    if(global.rewoundFrames &gt; 0){
-        // create clonePlayer here
-        show_debug_message('rewound frames');
-        instance_create(o_player.x, o_player.y, o_playerClone);
-    }
-    global.isRecording = true;
-    global.timeStep++;
-    global.canMove = true;
-    global.rewoundFrames = 0;
 }
 </string>
           </argument>

@@ -29,6 +29,7 @@
 
 hspeed = 0;
 vspeed  = 2;
+dir = 1;
 </string>
           </argument>
         </arguments>
@@ -52,7 +53,7 @@ vspeed  = 2;
           <argument>
             <kind>1</kind>
             <string>if(delay &lt; 0 &amp;&amp; global.canMove){ 
-    hspeed += (30 - hspeed)/1000;
+    hspeed += (30 - hspeed)/1000 * dir;
 } else if(global.canMove){
     delay--;
 }
@@ -80,7 +81,9 @@ scr_recordThis();
           <argument>
             <kind>1</kind>
             <string>if(!dead &amp;&amp; !other.dead){
-    o_player.timePower += 10
+    if(o_player.timePower &gt; o_player.maxTimePower){
+        o_player.timePower = o_player.maxTimePower;
+    }
     dead = true;
     other.dead = true;
     instance_create(x, y, o_explosion);
