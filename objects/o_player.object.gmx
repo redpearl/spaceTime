@@ -31,6 +31,12 @@ timePower = 175;
 maxTimePower = 250;
 name = 'persist';
 timePowerTimer = 0;
+
+left_1 = 0
+right_1 = 1
+up_1 = 2
+down_1 = 3
+attack_1 = 4
 </string>
           </argument>
         </arguments>
@@ -54,23 +60,23 @@ timePowerTimer = 0;
           <argument>
             <kind>1</kind>
             <string>if(global.canMove &amp;&amp; !dead){
-    if(keyboard_check(vk_left)){
+    if(s_input(left_1)){
         hspeed = -2;
-    } else if(keyboard_check(vk_right)){
+    } else if(s_input(right_1)){
         hspeed = 2;
     } else {
         hspeed = 0;
     }
     
-    if(keyboard_check(vk_up)){
+    if(s_input(up_1)){
         vspeed = -2;
-    } else if(keyboard_check(vk_down)){
+    } else if(s_input(down_1)){
         vspeed = 2;
     } else {
         vspeed = 0;
     }
     shooting = false;
-    if(keyboard_check(ord('Z')) &amp;&amp; shotTimer &gt; 10){
+    if(s_input(attack_1) &amp;&amp; shotTimer &gt; 10){
         instance_create(x, y, o_playerProjectile);
         scr_playRandomShot();
         shotTimer = 0;
