@@ -72,6 +72,7 @@ timePowerTimer = 0;
     shooting = false;
     if(keyboard_check(ord('Z')) &amp;&amp; shotTimer &gt; 10){
         instance_create(x, y, o_playerProjectile);
+        scr_playRandomShot();
         shotTimer = 0;
         shooting = true;
     }

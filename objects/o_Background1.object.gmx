@@ -87,8 +87,10 @@ if (global.isRecording) {
             <string>if(scrollSpd &lt; 0){
     if(global.rewoundFrames &lt; 20){
         draw_sprite_tiled(spr_bckRewindSlow,image_index,0,drawY);
-    } else {
+    } else if(global.rewoundFrames &lt; 40){
         draw_sprite_tiled(spr_bckRewind,image_index,0,drawY);
+    } else {
+        draw_sprite_tiled(spr_bckRewindFast,image_index,0,drawY);
     }
 } else {
     draw_sprite_tiled(spr_bckForward,image_index,0,drawY);

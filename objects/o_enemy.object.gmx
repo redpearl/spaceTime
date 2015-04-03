@@ -52,10 +52,16 @@ vspeed = 1;
             <kind>1</kind>
             <string>if(global.canMove &amp;&amp; !dead){
     t += 1;
-    x = xstart + sin( t*pi*1.2/room_speed )*48;
+    x = xstart + sin( t*pi*1/room_speed )*48;
     shotTimer++;
-    if(shotTimer &gt; 32){
+    if(shotTimer &gt; 30){
+        sprite_index = spr_enemyAngry;
+    } else {
+        sprite_index = spr_enemy;
+    }
+    if(shotTimer &gt; 64){
         instance_create(x, y, o_enemyProjectile);
+        scr_playRandomEnemyShot();
         shotTimer = 0;
     }
 }
@@ -103,6 +109,7 @@ if (y &gt; view_hview[0]+16){
     var small4 = instance_create(x, y, o_explosionSmall);
     small4.hspeed = -2;
     small4.vspeed = 2;
+    scr_playRandomEnemyExplosion();
 }
 </string>
           </argument>
@@ -129,10 +136,10 @@ if (y &gt; view_hview[0]+16){
             <string>// kill player
 if(!dead){
     other.dead = true;
-    
+    scr_playRandomEnemyExplosion();
+    o_screenShakeController.shakeTimer = 1;
+    dead = true;
 }
-o_screenShakeController.shakeTimer = 1;
-dead = true;
 </string>
           </argument>
         </arguments>

@@ -76,6 +76,7 @@ show_debug_message('Spawned clone');
 
 if(shooting &amp;&amp; !dead){
     instance_create(x, y, o_playerProjectile);
+    scr_playRandomShot();
 }
 </string>
           </argument>
@@ -104,6 +105,7 @@ if(shooting &amp;&amp; !dead){
     var explode = instance_create(x, y, o_explosion);
     explode.dark = true;
     dead = true;
+    scr_playRandomShipExplosion();
 }
 </string>
           </argument>
@@ -132,6 +134,7 @@ if(shooting &amp;&amp; !dead){
     dead = true;
     var explode = instance_create(x, y, o_explosion);
     explode.dark = true;
+    scr_playRandomShipExplosion();
 }
 </string>
           </argument>

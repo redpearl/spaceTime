@@ -72,10 +72,14 @@ vspeed = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!dead){
+            <string>if(!dead &amp;&amp; !other.dead){
     other.dead = true;
+    if(!global.dead){
+        scr_playRandomShipExplosion();
+    }
+    dead = true;
+    show_debug_message('explode!');
 }
-dead = true;
 </string>
           </argument>
         </arguments>

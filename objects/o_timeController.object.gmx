@@ -49,6 +49,9 @@
           <argument>
             <kind>1</kind>
             <string>if((global.isRecording &amp;&amp; keyboard_check(ord('X')) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; keyboard_check(ord('X')) &amp;&amp; o_player.timePower &gt; 0)){
+    if(global.rewoundFrames &lt; 1){
+        audio_play_sound(snd_activate01, 10, false);
+    }
     with(o_playerClone){
      //   instance_destroy();
     }
