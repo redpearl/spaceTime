@@ -5,3 +5,6 @@ shotTimer = 0;
 shooting = false;
 type = 1;
 name = 'entity';
+delay = 0;
+hspeed = 0;
+vspeed = 0;
