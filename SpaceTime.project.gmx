@@ -102,6 +102,7 @@
     <object>objects\o_timeUp</object>
     <object>objects\o_impact</object>
     <object>objects\o_collision_parent</object>
+    <object>objects\o_timePowerMeter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
