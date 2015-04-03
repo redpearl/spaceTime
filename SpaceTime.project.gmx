@@ -45,7 +45,7 @@
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
-    <sprite>sprites\sprite19</sprite>
+    <sprite>sprites\spr_enemySmall</sprite>
     <sprites name="hud">
       <sprite>sprites\spr_hudMain</sprite>
       <sprite>sprites\spr_hudBar</sprite>
@@ -88,6 +88,7 @@
     <object>objects\o_GhostTest</object>
     <object>objects\oBossTest</object>
     <object>objects\o_bigEnemy</object>
+    <object>objects\o_enemyTemplate</object>
     <object>objects\o_enemySmall</object>
   </objects>
   <rooms name="rooms">
