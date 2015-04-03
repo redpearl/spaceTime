@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>o_collision_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -30,9 +30,12 @@ shotTimer = 0;
 rapidTimer = 0
 rapidRate = 0
 maxRapid = 0
+dmgTimer = 11
 //totalShots = 0
 //vspeed = 3;
 name = "persist"
+image_speed = 0
+
 </string>
           </argument>
         </arguments>
@@ -60,6 +63,12 @@ name = "persist"
     x = xstart + sin( t*pi*1/room_speed )*48;
     shotTimer++;
     rapidTimer++
+    dmgTimer++
+    
+    if dmgTimer &gt; 10 {
+    image_speed = 0
+    image_index = 0
+    }
 
     if(shotTimer &gt; 128){
         instance_create(x, y, o_bossLaser);
@@ -81,6 +90,30 @@ scr_recordThis();
 if (y &gt; view_hview[0]+16){
     dead = true;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="o_playerProjectile">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 1
+dmgTimer = 0
 </string>
           </argument>
         </arguments>

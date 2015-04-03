@@ -54,6 +54,9 @@
     <sprite>sprites\spr_bossBullet</sprite>
     <sprite>sprites\spr_screenFlash</sprite>
     <sprite>sprites\spr_timeUp</sprite>
+    <sprite>sprites\sprDebris</sprite>
+    <sprite>sprites\sprExpLarge</sprite>
+    <sprite>sprites\sprExpSmall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -97,6 +100,8 @@
     <object>objects\o_bossLaser</object>
     <object>objects\o_screenFlash</object>
     <object>objects\o_timeUp</object>
+    <object>objects\o_impact</object>
+    <object>objects\o_collision_parent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
