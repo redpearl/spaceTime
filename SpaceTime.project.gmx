@@ -12,10 +12,13 @@
     <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_explosion</sprite>
+    <sprite>sprites\spr_explosionSmall</sprite>
+    <sprite>sprites\spr_darkExplosion</sprite>
     <sprite>sprites\spr_enemyProjectile</sprite>
     <sprite>sprites\spr_bar</sprite>
     <sprite>sprites\spr_bckForward</sprite>
     <sprite>sprites\spr_bckRewind</sprite>
+    <sprite>sprites\spr_bckRewindSlow</sprite>
     <sprite>sprites\spr_Boss</sprite>
     <sprite>sprites\spr_enemy2</sprite>
     <sprite>sprites\spr_projectileEnemy</sprite>
@@ -43,6 +46,7 @@
     <object>objects\o_playerProjectile</object>
     <object>objects\o_enemy</object>
     <object>objects\o_explosion</object>
+    <object>objects\o_explosionSmall</object>
     <object>objects\o_enemyProjectile</object>
     <object>objects\obj_CRT</object>
     <object>objects\o_waveSpawner</object>

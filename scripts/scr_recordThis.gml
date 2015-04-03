@@ -12,6 +12,7 @@ if(global.isRecording && global.canMove){
     pArray[global.timeStep, 5] = t;
     pArray[global.timeStep, 6] = shotTimer;
     pArray[global.timeStep, 7] = shooting;
+    pArray[global.timeStep, 8] = type;
 } else {
     // set position to appropriate timeStep
     //hspeed = 0;
@@ -27,5 +28,10 @@ if(global.isRecording && global.canMove){
         t = pArray[global.timeStep, 5];
         shotTimer = pArray[global.timeStep, 6];
         shooting = pArray[global.timeStep, 7];
+        type = pArray[global.timeStep, 8];
     }
+}
+
+if(name != 'persist' && global.timeStep - firstTimeStep > 350){
+    instance_destroy();
 }

@@ -60,7 +60,10 @@ vspeed = 1;
     }
 }
 scr_recordThis();
-if y &gt; view_hview[0]+16 instance_destroy()
+
+if (y &gt; view_hview[0]+16){
+    dead = true;
+}
 </string>
           </argument>
         </arguments>
@@ -83,11 +86,23 @@ if y &gt; view_hview[0]+16 instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!dead){
+            <string>if(!dead &amp;&amp; !other.dead){
     o_player.timePower += 10
     dead = true;
     other.dead = true;
     instance_create(x, y, o_explosion);
+    var small1 = instance_create(x, y, o_explosionSmall);
+    small1.hspeed = 2;
+    small1.vspeed = 2;
+    var small2 = instance_create(x, y, o_explosionSmall);
+    small2.hspeed = -2;
+    small2.vspeed = -2;
+    var small3 = instance_create(x, y, o_explosionSmall);
+    small3.hspeed = 2;
+    small3.vspeed = -2;
+    var small4 = instance_create(x, y, o_explosionSmall);
+    small4.hspeed = -2;
+    small4.vspeed = 2;
 }
 </string>
           </argument>

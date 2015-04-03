@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>scr_initFunction();
 //o_screenShakeController.shakeTimer = 15;
+dark = false;
 </string>
           </argument>
         </arguments>
@@ -50,6 +51,9 @@
           <argument>
             <kind>1</kind>
             <string>scr_recordThis();
+if(dark){
+    sprite_index = spr_darkExplosion;
+}
 </string>
           </argument>
         </arguments>

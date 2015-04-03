@@ -49,34 +49,19 @@ scrollSpd = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>drawY +=scrollSpd
+            <string>drawY += scrollSpd;
 
 if (global.isRecording) {
-    scrollSpd = 2
+        scrollSpd = 2;
+    } else if (global.dead) {
+        scrollSpd = 0;
     } else {
-    scrollSpd = -10
+    if(global.rewoundFrames &gt; 20){
+            scrollSpd = -10;
+        } else {
+            scrollSpd = -2;
+        }
 }
-
-if global.isRecording 
-    {
-        scrollSpd = 2
-    }
-    
-    else 
-    {
-    
-    scrollSpd = 10
-    
-    }
-    
-    
-
-    
-
-if(o_player.dead){
-    scrollSpd = 0;
-}
-
 </string>
           </argument>
         </arguments>
@@ -99,7 +84,15 @@ if(o_player.dead){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_tiled(spr_bckForward,image_index,0,drawY)
+            <string>if(scrollSpd &lt; 0){
+    if(global.rewoundFrames &lt; 20){
+        draw_sprite_tiled(spr_bckRewindSlow,image_index,0,drawY);
+    } else {
+        draw_sprite_tiled(spr_bckRewind,image_index,0,drawY);
+    }
+} else {
+    draw_sprite_tiled(spr_bckForward,image_index,0,drawY);
+}
 </string>
           </argument>
         </arguments>
