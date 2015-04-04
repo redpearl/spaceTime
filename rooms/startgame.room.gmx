@@ -56,7 +56,7 @@ draw_set_font(font_OCR);</code>
   <instances>
     <instance objName="o_Background1" x="-96" y="128" name="inst_CCF4F009" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_screenShakeController" x="-96" y="96" name="inst_D839E7B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="8" y="64" name="inst_86D72FA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_logo" x="-96" y="64" name="inst_D82BEDBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

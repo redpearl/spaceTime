@@ -28,6 +28,9 @@
     <sound>sound\snd_spacetime</sound>
     <sound>sound\snd_timeover</sound>
     <sound>sound\snd_warning</sound>
+    <sound>sound\sng_main_backwards</sound>
+    <sound>sound\snd_intro_start</sound>
+    <sound>sound\snd_boss_teleport</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -126,12 +129,12 @@
     <object>objects\o_impact</object>
     <object>objects\o_collision_parent</object>
     <object>objects\o_timePowerMeter</object>
-    <object>objects\o_logo</object>
-    <object>objects\o_logoLetter</object>
     <object>objects\o_bossIntro</object>
     <object>objects\o_muzzleBoss</object>
     <object>objects\o_musicManager</object>
     <object>objects\o_bossBar</object>
+    <object>objects\o_logo</object>
+    <object>objects\o_logoLetter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\startgame</room>
