@@ -24,6 +24,7 @@
     <sound>sound\snd_enemyShot02</sound>
     <sound>sound\snd_enemyShot03</sound>
     <sound>sound\snd_enemyShot04</sound>
+    <sound>sound\sng_main</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -40,6 +41,7 @@
     <sprite>sprites\spr_bckRewindFast</sprite>
     <sprite>sprites\spr_bckRewindSlow</sprite>
     <sprite>sprites\spr_Boss</sprite>
+    <sprite>sprites\spr_bossIntro</sprite>
     <sprite>sprites\spr_enemy2</sprite>
     <sprite>sprites\spr_projectileEnemy</sprite>
     <sprite>sprites\spr_projectilePlayer</sprite>
@@ -47,8 +49,10 @@
     <sprite>sprites\spr_bigEnemy</sprite>
     <sprites name="hud">
       <sprite>sprites\spr_hudMain</sprite>
-      <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudLimit</sprite>
+      <sprite>sprites\spr_hudBarRed</sprite>
+      <sprite>sprites\spr_hudBar</sprite>
+      <sprite>sprites\spr_hudMainRed</sprite>
     </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
@@ -56,7 +60,9 @@
     <sprite>sprites\spr_timeUp</sprite>
     <sprite>sprites\sprDebris</sprite>
     <sprite>sprites\sprExpLarge</sprite>
+    <sprite>sprites\spr_MuzzleBoss</sprite>
     <sprite>sprites\sprExpSmall</sprite>
+    <sprite>sprites\spr_bossIntro1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -103,6 +109,9 @@
     <object>objects\o_impact</object>
     <object>objects\o_collision_parent</object>
     <object>objects\o_timePowerMeter</object>
+    <object>objects\o_bossIntro</object>
+    <object>objects\o_muzzleBoss</object>
+    <object>objects\o_musicManager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
