@@ -59,27 +59,19 @@ attack_1 = 4
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(timePower &gt; maxTimePower){
-    timePower = maxTimePower;
-}
-
-if(global.canMove &amp;&amp; !dead){
-    var moveSpeed = 2;
-    if(s_input(attack_1)){
-        moveSpeed = 1;
-    }
+            <string>if(global.canMove &amp;&amp; !dead){
     if(s_input(left_1)){
-        hspeed = -moveSpeed;
+        hspeed = -2;
     } else if(s_input(right_1)){
-        hspeed = moveSpeed;
+        hspeed = 2;
     } else {
         hspeed = 0;
     }
     
     if(s_input(up_1)){
-        vspeed = -moveSpeed;
+        vspeed = -2;
     } else if(s_input(down_1)){
-        vspeed = moveSpeed;
+        vspeed = 2;
     } else {
         vspeed = 0;
     }

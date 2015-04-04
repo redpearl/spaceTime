@@ -53,6 +53,7 @@
       <sprite>sprites\spr_hudBarRed</sprite>
       <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudMainRed</sprite>
+    </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
     <sprite>sprites\spr_screenFlash</sprite>
@@ -61,7 +62,9 @@
     <sprite>sprites\sprExpLarge</sprite>
     <sprite>sprites\spr_MuzzleBoss</sprite>
     <sprite>sprites\sprExpSmall</sprite>
+    <sprite>sprites\spr_bossBar</sprite>
     <sprite>sprites\spr_bossIntro1</sprite>
+    <sprite>sprites\spr_bossMeter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -111,6 +114,7 @@
     <object>objects\o_bossIntro</object>
     <object>objects\o_muzzleBoss</object>
     <object>objects\o_musicManager</object>
+    <object>objects\o_bossBar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
