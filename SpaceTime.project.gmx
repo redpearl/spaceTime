@@ -66,6 +66,7 @@
     <sprite>sprites\sprExpLarge</sprite>
     <sprite>sprites\spr_MuzzleBoss</sprite>
     <sprite>sprites\sprExpSmall</sprite>
+   <sprite>sprites\spr_bossBar</sprite>
     <sprite>sprites\spr_logo</sprite>
     <sprite>sprites\spr_logoS</sprite>
     <sprite>sprites\spr_logo_s</sprite>
@@ -75,6 +76,7 @@
     <sprite>sprites\spr_logo_e</sprite>
     <sprite>sprites\spr_time</sprite>
     <sprite>sprites\spr_bossIntro1</sprite>
+    <sprite>sprites\spr_bossMeter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -129,6 +131,7 @@
     <object>objects\o_bossIntro</object>
     <object>objects\o_muzzleBoss</object>
     <object>objects\o_musicManager</object>
+    <object>objects\o_bossBar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\startgame</room>

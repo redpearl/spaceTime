@@ -59,7 +59,9 @@ window_set_size(432, 768);</code>
     <instance objName="o_screenShakeController" x="-96" y="96" name="inst_D839E7B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_timePowerMeter" x="108" y="352" name="inst_651F501D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_waveSpawner" x="100" y="-32" name="inst_1EDA844B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_musicManager" x="0" y="-32" name="inst_83486C85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_musicManager" x="-96" y="32" name="inst_83486C85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_bossBar" x="0" y="0" name="inst_220A5257" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_bossIntro" x="108" y="96" name="inst_E56ED99A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
