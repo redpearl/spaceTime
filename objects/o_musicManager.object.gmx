@@ -26,6 +26,58 @@
           <argument>
             <kind>1</kind>
             <string>if !audio_is_playing(sng_main) audio_play_sound(sng_main,1,1)
+
+if !audio_is_playing(sng_main_backwards){
+    audio_play_sound(sng_main_backwards,1,1);
+    audio_pause_sound(sng_main_backwards);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!global.isRecording &amp;&amp; (!audio_is_playing(sng_main_backwards) || audio_is_paused(sng_main_backwards)) ) {
+    if (audio_is_playing(sng_main) ){
+        audio_pause_sound(sng_main);
+    }
+    show_debug_message('play backwards');
+    
+    if(!audio_is_playing(sng_main_backwards)){
+        audio_play_sound(sng_main_backwards, 1, 1);
+    } else if(audio_is_paused(sng_main_backwards)){
+        audio_resume_sound(sng_main_backwards);
+    }
+    audio_sound_set_track_position(sng_main_backwards, audio_sound_length(sng_main) - audio_sound_get_track_position(sng_main));
+} else if (global.isRecording &amp;&amp; (!audio_is_playing(sng_main) || audio_is_paused(sng_main)) ){
+    if(audio_is_playing(sng_main_backwards) ){
+        audio_pause_sound(sng_main_backwards);
+    }
+    show_debug_message('play forwards');
+    
+    if(!audio_is_playing(sng_main)){
+        audio_play_sound(sng_main, 1, 1);
+    } else if(audio_is_paused(sng_main)){
+        audio_resume_sound(sng_main);
+    }
+    audio_sound_set_track_position(sng_main, audio_sound_length(sng_main_backwards) - audio_sound_get_track_position(sng_main_backwards));
+}
 </string>
           </argument>
         </arguments>

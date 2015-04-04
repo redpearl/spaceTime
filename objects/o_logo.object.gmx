@@ -69,8 +69,9 @@ global.rewoundFrames = 0;
 }
 timer++;
 
-if(timer &gt; 150 &amp;&amp; keyboard_check(ord('X'))){
+if(timer &gt; 150 &amp;&amp; keyboard_check(ord('X')) &amp;&amp; !start){
     start = true;
+    audio_play_sound(snd_intro_start, 1, false);
 }
 
 if(start){
@@ -121,6 +122,7 @@ if(timer &gt; 150 &amp;&amp; global.rewoundFrames &lt; 200){
     if(stopped &gt; 0){ 
         draw_sprite(spr_time, round(random(5)), timex, timey);
     } else {
+        scr_playRandomEnemyExplosion();
         timex = 60 + random(10)*8;
         timey = 120 + random(10)*10;
         stopped = 5 + random(20);
