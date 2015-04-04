@@ -50,6 +50,9 @@ vspeed = 4;
           <argument>
             <kind>1</kind>
             <string>scr_recordThis();
+if (y &gt; view_hview[0]+16){
+    dead = true;
+}
 </string>
           </argument>
         </arguments>

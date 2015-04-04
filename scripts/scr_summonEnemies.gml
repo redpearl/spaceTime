@@ -126,3 +126,6 @@ if(argument0 == 'oneEnemy'){
     instance_create(170, -30, o_enemy);
     instance_create(30, -30, o_enemy);
 }
+else if(argument0 == 'bossSpawn'){
+    instance_create(+108, +64, o_bossIntro);
+}

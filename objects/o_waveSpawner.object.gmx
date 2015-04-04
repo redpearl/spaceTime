@@ -91,9 +91,12 @@ if(t &gt; 200){
     } else if(type == 11){
         scr_summonEnemies('mixedEnemies1');
     }
+    else if(type == 12){
+        scr_summonEnemies('bossSpawn');
+    }
     type++;
-    if(type &gt; 11){
-    type  = 1;
+    if(type &gt; 12){
+    //type  = 1;
     }
     t = 0;
 }

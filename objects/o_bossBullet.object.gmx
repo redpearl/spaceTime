@@ -3,7 +3,7 @@
   <spriteName>spr_bossBullet</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -50,6 +50,10 @@ vspeed = 6;
           <argument>
             <kind>1</kind>
             <string>scr_recordThis();
+if image_index = 1 {
+image_index = 1
+image_speed = 0
+}
 </string>
           </argument>
         </arguments>
@@ -80,6 +84,30 @@ vspeed = 6;
     dead = true;
     show_debug_message('explode!');
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//image_speed = 0
+//image_index = 1
 </string>
           </argument>
         </arguments>
