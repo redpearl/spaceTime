@@ -28,6 +28,11 @@
     <sound>sound\snd_spacetime</sound>
     <sound>sound\snd_timeover</sound>
     <sound>sound\snd_warning</sound>
+    <sound>sound\snd_intro_start</sound>
+    <sound>sound\snd_powerup01</sound>
+    <sound>sound\snd_powerup02</sound>
+    <sound>sound\snd_powerup03</sound>
+    <sound>sound\snd_powerup04</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -93,6 +98,7 @@
     <script>scripts\scr_playRandomShot.gml</script>
     <script>scripts\scr_playRandomEnemyShot.gml</script>
     <script>scripts\s_input.gml</script>
+    <script>scripts\scr_playRandomPowerUp.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>
