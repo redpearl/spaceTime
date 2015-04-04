@@ -71,6 +71,7 @@ timer++;
 
 if(timer &gt; 150 &amp;&amp; keyboard_check(ord('X'))){
     start = true;
+    if !audio_is_playing(snd_spacetime) audio_play_sound(snd_spacetime,1,0)
 }
 
 if(start){

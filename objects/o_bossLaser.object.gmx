@@ -81,9 +81,10 @@ if image_index = 21 instance_create(0,0,o_screenFlash)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &gt; 20 {
+            <string>if image_index = 21 or image_index = 22 or image_index = 23 {
     if (!dead &amp;&amp; !other.dead) {
         other.dead = true;
+        instance_deactivate_object(o_screenFlash)
         if(!global.dead){
             scr_playRandomShipExplosion();
         }
