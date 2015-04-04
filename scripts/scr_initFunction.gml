@@ -8,3 +8,4 @@ name = 'entity';
 delay = 0;
 hspeed = 0;
 vspeed = 0;
+hp = 0;

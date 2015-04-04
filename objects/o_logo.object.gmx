@@ -25,14 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action_1 = 0
+            <string>sx = 300;
+px = -300;
+ax = 300;
+cx = -300;
+ex = 300;
+
+timer = 0;
+timex = 0;
+timey = 0;
+stopped = 0;
+
+start = false;
 global.rewoundFrames = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,56 +60,34 @@ global.rewoundFrames = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0)){
-    if(global.rewoundFrames &lt; 1){
-        audio_play_sound(snd_activate01, 10, false);
-    }
-    with(o_playerClone){
-     //   instance_destroy();
-    }
+            <string>if(!start){
+    sx += (100 - sx)/15;
+    px += (100 - px)/20;
+    ax += (100 - ax)/25;
+    cx += (100 - cx)/30;
+    ex += (100 - ex)/35;
+}
+timer++;
+
+if(timer &gt; 150 &amp;&amp; keyboard_check(ord('X'))){
+    start = true;
+}
+
+if(start){
+    global.rewoundFrames++;
     global.isRecording = false;
-    global.canMove = false;
-    if(global.timeStep &gt; o_player.firstTimeStep){
-        if(global.rewoundFrames &lt; 15){
-            global.timeStep--;
-            o_player.timePower--;
-            global.rewoundFrames++;
-        } else if(global.rewoundFrames &lt; 30) {
-            if(global.timeStep - 2 &gt;= o_player.firstTimeStep){
-                global.timeStep -= 2;
-                o_player.timePower -=2;
-                global.rewoundFrames += 2;
-            } else {
-                global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
-                global.timeStep = o_player.firstTimeStep;
-            }
-        } else {
-            if(global.timeStep - 5 &gt;= o_player.firstTimeStep){
-                o_player.timePower -= 5;
-                global.timeStep -= 5;
-                global.rewoundFrames += 5;
-            } else {
-                global.rewoundFrames += global.timeStep - o_player.firstTimeStep;
-                global.timeStep = o_player.firstTimeStep;
-            }
-        }
-    } else {
-        global.timeStep = o_player.firstTimeStep;
-    }
+    global.dead = false;
     
-} else if(o_player.dead){
-    global.isRecording = false;
-    global.canMove = false;
-} else {
-    if(global.rewoundFrames &gt; 0){
-        // create clonePlayer here
-        show_debug_message('rewound frames');
-        instance_create(o_player.x, o_player.y, o_playerClone);
+    if(global.rewoundFrames &gt; 150){
+        sx += (300 - sx)/15;
+        px += (-300 - px)/20;
+        ax += (300 - ax)/25;
+        cx += (-300 - cx)/30;
+        ex += (300 - ex)/35;
     }
-    global.isRecording = true;
-    global.timeStep++;
-    global.canMove = true;
-    global.rewoundFrames = 0;
+    if(global.rewoundFrames &gt; 220){
+        room_goto_next();
+    }
 }
 </string>
           </argument>
@@ -122,8 +111,22 @@ global.rewoundFrames = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// ble
-//draw_text(10, 10, global.timeStep);
+            <string>draw_sprite(spr_logo_s, 0, sx, 30);
+draw_sprite(spr_logo_p, 0, px, 90);
+draw_sprite(spr_logo_a, 0, ax, 150);
+draw_sprite(spr_logo_c, 0, cx, 210);
+draw_sprite(spr_logo_e, 0, ex, 270);
+
+if(timer &gt; 150 &amp;&amp; global.rewoundFrames &lt; 200){
+    if(stopped &gt; 0){ 
+        draw_sprite(spr_time, round(random(5)), timex, timey);
+    } else {
+        timex = 60 + random(10)*8;
+        timey = 120 + random(10)*10;
+        stopped = 5 + random(20);
+    }
+    stopped--;
+}
 </string>
           </argument>
         </arguments>

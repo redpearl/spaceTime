@@ -16,6 +16,7 @@ if(global.isRecording && global.canMove){
     pArray[global.timeStep, 9] = hspeed;
     pArray[global.timeStep, 10] = vspeed;
     pArray[global.timeStep, 11] = delay;
+    pArray[global.timeStep, 12] = hp;
 } else {
     // set position to appropriate timeStep
     //hspeed = 0;
@@ -35,6 +36,7 @@ if(global.isRecording && global.canMove){
         hspeed = pArray[global.timeStep, 9];
         vspeed = pArray[global.timeStep, 10];
         delay = pArray[global.timeStep, 11];
+        hp = pArray[global.timeStep, 12];
     }
 }
 
