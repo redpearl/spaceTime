@@ -53,7 +53,6 @@
       <sprite>sprites\spr_hudBarRed</sprite>
       <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudMainRed</sprite>
-    </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
     <sprite>sprites\spr_screenFlash</sprite>
