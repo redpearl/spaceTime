@@ -130,7 +130,7 @@ dmgTimer = 0
 
 
 if(!dead &amp;&amp; !other.dead){
-    hp -=1
+    hp -=2
 //    o_player.timePower += 10
 //    dead = true;
     other.dead = true;

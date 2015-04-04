@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>scr_initFunction();
 vspeed = -15;
+image_speed = .5
 </string>
           </argument>
         </arguments>
@@ -51,6 +52,10 @@ vspeed = -15;
             <kind>1</kind>
             <string>scr_recordThis();
 if y &lt; -16 dead = true
+if image_index = 2 {
+image_index = 2
+image_speed = 0
+}
 </string>
           </argument>
         </arguments>
