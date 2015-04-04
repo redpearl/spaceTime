@@ -47,13 +47,13 @@
     <sprite>sprites\spr_projectilePlayer</sprite>
     <sprite>sprites\spr_playerClone</sprite>
     <sprite>sprites\spr_bigEnemy</sprite>
+    <sprite>sprites\spr_bigEnemyHit</sprite>
     <sprites name="hud">
       <sprite>sprites\spr_hudMain</sprite>
       <sprite>sprites\spr_hudLimit</sprite>
       <sprite>sprites\spr_hudBarRed</sprite>
       <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudMainRed</sprite>
-    </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
     <sprite>sprites\spr_screenFlash</sprite>
@@ -62,7 +62,15 @@
     <sprite>sprites\sprExpLarge</sprite>
     <sprite>sprites\spr_MuzzleBoss</sprite>
     <sprite>sprites\sprExpSmall</sprite>
-    <sprite>sprites\spr_bossBar</sprite>
+   <sprite>sprites\spr_bossBar</sprite>
+    <sprite>sprites\spr_logo</sprite>
+    <sprite>sprites\spr_logoS</sprite>
+    <sprite>sprites\spr_logo_s</sprite>
+    <sprite>sprites\spr_logo_p</sprite>
+    <sprite>sprites\spr_logo_a</sprite>
+    <sprite>sprites\spr_logo_c</sprite>
+    <sprite>sprites\spr_logo_e</sprite>
+    <sprite>sprites\spr_time</sprite>
     <sprite>sprites\spr_bossIntro1</sprite>
     <sprite>sprites\spr_bossMeter</sprite>
   </sprites>
@@ -85,6 +93,9 @@
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\font_OCR</font>
+  </fonts>
   <objects name="objects">
     <object>objects\o_timeController</object>
     <object>objects\o_player</object>
@@ -111,15 +122,19 @@
     <object>objects\o_impact</object>
     <object>objects\o_collision_parent</object>
     <object>objects\o_timePowerMeter</object>
+    <object>objects\o_logo</object>
+    <object>objects\o_logoLetter</object>
     <object>objects\o_bossIntro</object>
     <object>objects\o_muzzleBoss</object>
     <object>objects\o_musicManager</object>
     <object>objects\o_bossBar</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\startgame</room>
     <room>rooms\room0</room>
     <room>rooms\rm_init</room>
     <room>rooms\rm_main</room>
+    <room>rooms\room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
