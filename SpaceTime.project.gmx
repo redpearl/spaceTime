@@ -35,6 +35,14 @@
     <sound>sound\snd_powerup02</sound>
     <sound>sound\snd_powerup03</sound>
     <sound>sound\snd_powerup04</sound>
+    <sound>sound\snd_bossShot01</sound>
+    <sound>sound\snd_bossShot02</sound>
+    <sound>sound\snd_bossShot03</sound>
+    <sound>sound\snd_bossShot04</sound>
+    <sound>sound\snd_bossLaser01</sound>
+    <sound>sound\snd_bossLaser02</sound>
+    <sound>sound\snd_bossLaser03</sound>
+    <sound>sound\snd_bossLaser04</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -84,6 +92,9 @@
     <sprite>sprites\spr_time</sprite>
     <sprite>sprites\spr_bossIntro1</sprite>
     <sprite>sprites\spr_bossMeter</sprite>
+    <sprite>sprites\spr_over</sprite>
+    <sprite>sprites\spr_hero</sprite>
+    <sprite>sprites\spr_you</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -101,6 +112,8 @@
     <script>scripts\scr_playRandomEnemyShot.gml</script>
     <script>scripts\s_input.gml</script>
     <script>scripts\scr_playRandomPowerUp.gml</script>
+    <script>scripts\scr_playBossShot.gml</script>
+    <script>scripts\scr_playBossLaser.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>

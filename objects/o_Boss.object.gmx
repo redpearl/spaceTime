@@ -36,7 +36,7 @@ dmgTimer = 11
 //vspeed = 3;
 name = "persist"
 
-hp = 203
+hp = 203;
 </string>
           </argument>
         </arguments>
@@ -79,7 +79,7 @@ hp = 203
 
     if(shotTimer &gt; 128) &amp;&amp; sleepTime &gt; 48{
         instance_create(x, y, o_bossLaser);
-        scr_playRandomEnemyShot();
+        
         shotTimer = 0;
     }
     if rapidTimer &gt; 64 &amp;&amp; sleepTime &gt; 48 {
@@ -89,6 +89,7 @@ hp = 203
             instance_create(x-38, y+24, o_muzzleBoss);
             instance_create(x+38, y+16, o_bossBullet);
             instance_create(x+38, y+24, o_muzzleBoss);
+            scr_playBossShot();
             maxRapid++
             rapidRate = 0
             if maxRapid &gt; 10 { 
@@ -99,7 +100,10 @@ hp = 203
         }
     }
 }
-if hp &lt;= 0 dead = true
+if (hp &lt;= 0){
+    dead = true;
+    o_timeController.wongame = true;
+}
 scr_recordThis();
 
 

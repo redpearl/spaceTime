@@ -27,6 +27,17 @@
             <kind>1</kind>
             <string>action_1 = 0
 global.rewoundFrames = 0;
+gameover = false;
+timex = 0;
+timey = 0;
+overx = 0;
+overy = 0;
+youx = 0;
+youy = 0;
+herox = 0;
+heroy = 0;
+stopped  = false;
+wongame = false;
 </string>
           </argument>
         </arguments>
@@ -49,7 +60,7 @@ global.rewoundFrames = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0)){
+            <string>if((global.isRecording &amp;&amp; s_input(action_1) &amp;&amp; o_player.timePower &gt; 30 &amp;&amp; !gameover) || (!global.isRecording &amp;&amp; s_input(action_1)  &amp;&amp; o_player.timePower &gt; 0  &amp;&amp; !gameover)){
     if(global.rewoundFrames &lt; 1){
         audio_play_sound(snd_activate01, 10, false);
     }
@@ -86,9 +97,14 @@ global.rewoundFrames = 0;
         global.timeStep = o_player.firstTimeStep;
     }
     
+} else if (keyboard_check(ord('X')) &amp;&amp; gameover){
+    game_restart();
 } else if(o_player.dead){
     global.isRecording = false;
     global.canMove = false;
+    if(o_player.timePower &lt; 30 &amp;&amp; !gameover){
+        gameover = true;
+    }
 } else {
     if(global.rewoundFrames &gt; 0){
         // create clonePlayer here
@@ -124,6 +140,33 @@ global.rewoundFrames = 0;
             <kind>1</kind>
             <string>// ble
 //draw_text(10, 10, global.timeStep);
+if(gameover){
+    if(stopped &gt; 0){ 
+        draw_sprite(spr_time, round(random(5)), timex, timey);
+        draw_sprite(spr_over, round(random(5)), overx, overy);
+    } else {
+        timex = 60 + random(10)*8;
+        timey = 120 + random(10)*10;
+        overx = 50 + random(10)*8;
+        overy = 160 + random(10)*10;
+        stopped = 5 + random(20);
+        scr_playRandomShipExplosion();
+    }
+    stopped--;
+} else if (wongame){
+    if(stopped &gt; 0){ 
+        draw_sprite(spr_you, round(random(5)), youx, youy);
+        draw_sprite(spr_hero, round(random(5)), herox, heroy);
+    } else {
+        youx = 60 + random(10)*8;
+        youy = 120 + random(10)*10;
+        herox = 50 + random(10)*8;
+        heroy = 160 + random(10)*10;
+        stopped = 5 + random(20);
+        scr_playRandomShipExplosion();
+    }
+    stopped--;
+}
 </string>
           </argument>
         </arguments>

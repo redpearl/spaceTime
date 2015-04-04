@@ -58,7 +58,12 @@ x = o_Boss.x
 y = o_Boss.y+24
 
 }
-if image_index = 21 instance_create(0,0,o_screenFlash)
+if (image_index = 21){
+     instance_create(0,0,o_screenFlash);
+     if(!audio_is_playing(snd_bossLaser01)){
+        scr_playBossLaser();
+     }
+}
 </string>
           </argument>
         </arguments>
