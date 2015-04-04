@@ -25,6 +25,9 @@
     <sound>sound\snd_enemyShot03</sound>
     <sound>sound\snd_enemyShot04</sound>
     <sound>sound\sng_main</sound>
+    <sound>sound\sng_main_backwards</sound>
+    <sound>sound\snd_intro_start</sound>
+    <sound>sound\snd_boss_teleport</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -54,6 +57,7 @@
       <sprite>sprites\spr_hudBarRed</sprite>
       <sprite>sprites\spr_hudBar</sprite>
       <sprite>sprites\spr_hudMainRed</sprite>
+    </sprites>
     <sprite>sprites\spr_laserBoss</sprite>
     <sprite>sprites\spr_bossBullet</sprite>
     <sprite>sprites\spr_screenFlash</sprite>
