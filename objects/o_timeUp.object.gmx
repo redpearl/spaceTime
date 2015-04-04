@@ -75,6 +75,7 @@ vspeed = 1.5;
             <string>if(!dead &amp;&amp; !other.dead){
     other.timePower += 10;
     dead = true;
+    scr_playRandomPowerUp();
     show_debug_message('explode!');
 }
 </string>

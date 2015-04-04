@@ -71,7 +71,7 @@ timer++;
 
 if(timer &gt; 150 &amp;&amp; keyboard_check(ord('X'))){
     start = true;
-    if !audio_is_playing(snd_spacetime) audio_play_sound(snd_spacetime,1,0)
+    if !audio_is_playing(snd_spacetime) audio_play_sound(snd_intro_start,1,0)
 }
 
 if(start){
@@ -85,6 +85,7 @@ if(start){
         ax += (300 - ax)/25;
         cx += (-300 - cx)/30;
         ex += (300 - ex)/35;
+        scr_playRandomShipExplosion();
     }
     if(global.rewoundFrames &gt; 220){
         room_goto_next();
@@ -125,6 +126,7 @@ if(timer &gt; 150 &amp;&amp; global.rewoundFrames &lt; 200){
         timex = 60 + random(10)*8;
         timey = 120 + random(10)*10;
         stopped = 5 + random(20);
+        scr_playRandomShipExplosion();
     }
     stopped--;
 }
